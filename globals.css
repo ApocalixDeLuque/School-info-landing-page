@@ -1,11 +1,11 @@
 @font-face {
     font-family: "Yeseva One";
-    src: url("../YesevaOne-Regular.ttf") format("truetype");
+    src: url("./YesevaOne-Regular.ttf") format("truetype");
 }
 
 @font-face {
     font-family: "Indie Flower";
-    src: url("../IndieFlower-Regular.ttf") format("truetype");
+    src: url("./IndieFlower-Regular.ttf") format("truetype");
 }
 
 * {
@@ -86,7 +86,7 @@ body {
 }
 
 .home {
-    background-image: url("../img/hero.jpeg");
+    background-image: url("./hero.jpeg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: center;
@@ -156,7 +156,7 @@ body {
     width: 100%;
     min-width: fit-content;
 
-    background-image: url("../img/antidesigncollage.png");
+    background-image: url("./antidesigncollage.png");
     background-repeat: no-repeat;
     background-size: 100% auto;
     background-position: center 100px;
