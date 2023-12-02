@@ -37,20 +37,23 @@ body {
 
     background-color: rgba(0, 0, 0, 0.9);
     color: white;
-    && img {
-        filter: invert(1);
-        width: 2rem;
-        height: 2rem;
-        margin-right: 1rem;
-    }
-
-    && p {
+    && .logo {
         display: flex;
-        width: 100%;
-        height: fit-content;
+        && img {
+            filter: invert(1);
+            width: 2rem;
+            height: 2rem;
+            margin-right: 1rem;
+        }
 
-        text-align: center;
-        font-size: 2rem;
+        && p {
+            display: flex;
+            width: 100%;
+            height: fit-content;
+
+            text-align: center;
+            font-size: 2rem;
+        }
     }
 
     && div {
@@ -94,8 +97,7 @@ body {
     background-blend-mode: multiply; /* Hace que la imagen se mezcle con el color de fondo */
 
     display: flex;
-
-    height: 100vh;
+    min-height: fit-content;
 
     && div {
         display: flex;
@@ -116,7 +118,7 @@ body {
             text-align: start;
             font-size: 2.5rem;
 
-            padding: 1rem 4rem;
+            padding: 2rem 4rem;
             margin-left: -1px;
 
             border-radius: 0 2rem 2rem 0; /* Para que el botón tenga las esquinas de la derecha redondeadas */
@@ -158,7 +160,7 @@ body {
 
     background-image: url("./antidesigncollage.png");
     background-repeat: no-repeat;
-    background-size: 100% auto;
+    background-size: 85% auto;
     background-position: center 100px;
 
     && div {
@@ -264,7 +266,7 @@ body {
             }
 
             && img {
-                margin-top: -210px;
+                margin-top: 0;
                 width: 100%;
 
                 height: auto;
@@ -506,61 +508,6 @@ body {
     }
 }
 
-/* <div id="ia" class="ia">
-            <div>
-                <h1 class="title">Inteligencia Artificial</h1>
-                <p>
-                    En el internet existe mucho ruido con el tema de la inteligencia artificial. Hoy en día es mas fácil
-                    contar con una inteligencia artificial, desde tu teléfono hasta en los programas que usas
-                    diariamente. En este caso te daremos algunos tips que puedes usar en tus trabajos de fotografía, con
-                    ayuda de la inteligencia artificial, mas específicamente en el programa llamado Photoshop.
-                </p>
-                <p>
-                    Normalmente para componer algún detalle mínimo o grande de una fotografía requieres de diferentes
-                    herramientas de este programa, como el "tapon de clonar" "la malla de relleno" por mencionar
-                    algunas, pero con la ultima actualización de Photoshop en algunas ocasiones podemos pasar de usar
-                    estas herramientas ya que se implemento la herramienta de "relleno generativo
-                </p>
-                <p>
-                    Esta herramienta te ayudara a generar diferentes ideas de forma rápida y creativa, desde generar tu
-                    imagen de diferentes maneras, hasta colocar objetos con los valores correctos a la imagen, debemos
-                    recordar que esta es una herramienta joven, en algunas ocasiones la imagen deberá tener manipulación
-                    de tu propia mano, ya que los resultados puedan mejorarse un poco mas.
-                </p>
-                <p>
-                    En este ejemplo podemos ver como seleccionamos cierto fragmento de la piedra lateral, y con ayuda de
-                    la inteligencia artificial podemos generar una imagen mas limpia. al realizar esta acción el
-                    programa te dará una diferente cantidad de opciones del trabajo artificial que genero y será tu
-                    criterio quien elija la mejor opción
-                </p>
-                <p>
-                    podemos observar como la inteligencia artificial realizo si trabajo de manera eficiente, y
-                    observamos como en la barra inferior nos da el numero de opciones que tenemos para seleccionar. Esta
-                    a tu decisión si deseas generar mas objetos dentro de tu imagen o dejarla como esta tu imaginación
-                    es el limite.
-                </p>
-                <p>
-                    El siguiente ejemplo se trata de rellenar nuevos espacios de la fotografía con la inteligencia
-                    artificial, usaremos de igual manera la barra inferior donde nos da la opción de "ampliación
-                    generativa" para que se genere de manera automática el relleno de la imagen.
-                </p>
-                <p>
-                    tomaremos en cuenta otro ejemplo sobre el relleno generativo de Adobe Photoshop, muchas veces los
-                    cielos de nuestras fotos pueden llegar a verse muy poco o muy recortados, o en su defecto, poco
-                    vistosos, esto se puede corregir de la misa manera que hemos estado viendo, solo necesitamos darle
-                    la instrucción a programa para que realice el trabajo.
-                </p>
-                <p>
-                    podemos observar como el programa realizo varias opciones a escoger para asi nosotros hacer nuestras
-                    correcciones a nuestro gusto
-                </p>
-                <p>
-                    no cabe duda que la inteligencia artificial esta dando pasos muy grandes, adentrándose mas a
-                    nuestras labores diarias como simplemente una imagen o hasta poder realizar ensayos.
-                </p>
-            </div>
-        </div> */
-
 .ia {
     display: flex;
     flex-direction: column;
@@ -596,31 +543,387 @@ body {
         }
 
         && img:hover {
-            transform: scale(2);
+            transform: scale(1.5);
             box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
             cursor: pointer;
         }
     }
+}
 
-    && .iaimages {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 4rem;
-        padding: 10rem 5rem;
+@media only screen and (max-width: 600px) {
+    .header {
+        padding: 1rem;
+        flex-direction: column;
+    }
 
-        && img {
+    .header && p {
+        font-size: 1.5rem;
+    }
+
+    .home {
+        background-size: cover;
+    }
+
+    .home && h1 {
+        font-size: 2rem;
+    }
+
+    .antidesign,
+    .surrealism,
+    .redes,
+    .cine,
+    .ia {
+        padding: 5rem 1rem;
+    }
+
+    .antidesign && h1,
+    .surrealism && h1,
+    .redes && h1,
+    .cine && h1,
+    .ia && h1 {
+        font-size: 2.5rem;
+    }
+
+    .header {
+        height: fit-content;
+        gap: 1rem;
+        && div {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            width: auto;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            && a {
+                width: auto;
+                margin: 0;
+                padding: 0.25rem 0.5rem;
+                font-size: 0.75rem;
+            }
+        }
+
+        && .logo {
+            display: flex;
+            && img {
+                width: 20px;
+                height: auto;
+            }
+            && p {
+                width: auto;
+                margin: 0;
+                padding: 0;
+                font-size: 1rem;
+            }
+        }
+    }
+
+    .home {
+        padding: 3rem 0;
+        height: fit-content;
+        flex-direction: column-reverse;
+        gap: 2rem;
+
+        && h1 {
+            width: auto;
             margin: 0;
-            width: 300px;
-            border-radius: 0.5rem;
-            height: auto;
-            transition: all 0.1s ease-in-out;
+            padding: 4rem 2rem;
+            font-size: 2rem;
+        }
+        && div {
+            width: auto;
+            flex-wrap: wrap;
+            padding: 0;
+            margin: 0;
+            gap: 1rem;
+            && a {
+                width: auto;
+                margin: 0;
+                padding: 1rem 2rem;
+                font-size: 1rem;
+            }
+        }
+    }
+
+    .antidesign {
+        width: auto;
+        margin-top: -105px;
+        && div {
+            margin: 300px 0 0 0;
+
+            && h1 {
+                font-size: 2rem;
+            }
+            && p {
+                margin-top: 2rem;
+                font-size: 1rem;
+            }
+            && div {
+                padding: 0;
+                margin: 0;
+                flex-direction: column;
+                gap: 3rem;
+            }
+        }
+    }
+
+    .surrealism {
+        width: auto;
+        && .parte1 {
+            width: auto;
+            && img {
+                width: 100px;
+                height: auto;
+            }
+
+            && h1 {
+                font-size: 2rem;
+            }
+
+            && p {
+                font-size: 1rem;
+                padding-top: 2rem;
+            }
+
+            && div {
+                && p {
+                    /* display: flex;
+                    background-color: #b22222; */
+                    width: auto;
+                    padding: 0;
+                }
+
+                && div {
+                    display: none;
+                }
+
+                && img {
+                    margin-top: 50px;
+                    width: 100%;
+                    height: auto;
+                }
+            }
         }
 
-        && img:hover {
-            transform: scale(2);
-            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
-            cursor: pointer;
+        && .parte2 {
+            width: auto;
+            flex-direction: column;
+            && div {
+                padding: 0;
+                && h1 {
+                    font-size: 1.5rem;
+                }
+                && p {
+                    font-size: 1rem;
+                    font-weight: lighter;
+                    padding: 0;
+                    margin: 4rem 0;
+                }
+
+                && div {
+                    width: auto;
+                    margin-top: 0;
+                    padding: 0;
+                    flex-direction: column;
+                    gap: 3rem;
+                }
+            }
+            && img {
+                align-self: center;
+                width: 80%;
+                height: auto;
+            }
         }
+    }
+
+    .redes {
+        width: auto;
+        && div {
+            display: flex;
+            flex-direction: column;
+            width: auto;
+            max-width: 100%;
+            gap: 3rem;
+            && div {
+                width: auto;
+                padding: 0 1rem;
+                gap: 1rem;
+                && img {
+                    width: auto;
+                    padding: 0;
+                    margin: 0;
+                }
+                && h1 {
+                    font-size: 2rem;
+                }
+                && p {
+                    font-size: 1rem;
+                    width: auto;
+                    padding: 0;
+                    margin: 0;
+                }
+            }
+        }
+        && .redesimages {
+            padding: 0;
+            margin: 2rem 0 0 0;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            && img {
+                width: 50px;
+                height: auto;
+            }
+        }
+    }
+
+    .cine {
+        width: auto;
+        && .main {
+            && p {
+                font-family: "Yeseva One", fallback;
+                text-align: center;
+                font-size: 3rem;
+            }
+            && .cineimages {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+                padding: 1rem;
+                margin: 2rem 0 0 0;
+                && img {
+                    width: 100%;
+                    height: auto;
+                    aspect-ratio: 9/14;
+                    border-radius: 0.5rem;
+                    transition: all 0.1s ease-in-out;
+                }
+            }
+            && h3 {
+                font-size: 1rem;
+                text-align: center;
+            }
+        }
+
+        && .peli {
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: center;
+            align-items: center;
+            gap: 5rem;
+
+            width: auto;
+            height: fit-content;
+            padding: 5rem 1rem;
+
+            && div {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                && h1 {
+                    font-size: 2rem;
+                }
+                && p {
+                    font-family: "Indie Flower", fallback;
+                    margin-top: 2rem;
+                    font-size: 1rem;
+                }
+            }
+            && .peliimages {
+                display: flex;
+                width: 100%;
+                height: auto;
+
+                && img {
+                    width: 100%;
+                    height: auto;
+                    aspect-ratio: 9/14;
+                    border-radius: 0.5rem;
+                    transition: all 0.1s ease-in-out;
+                }
+
+                && a {
+                    margin-top: -77px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    width: auto;
+
+                    font-family: "Indie Flower", fallback;
+                    text-align: center;
+                    font-size: 1.5rem;
+
+                    padding: 0.5rem 3rem;
+
+                    background-color: rgba(0, 0, 0, 0.5);
+                    border: 1px solid black;
+                    border-radius: 0.5rem;
+                    color: white;
+                    text-decoration: none;
+                    transition: all 0.2;
+                }
+            }
+        }
+    }
+
+    .ia {
+        width: auto;
+        && div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            && h1 {
+                font-size: 2rem;
+            }
+            && p {
+                font-family: "Indie Flower", fallback;
+                margin: 1rem;
+                font-size: 1rem;
+            }
+            && img {
+                margin: 2rem 0;
+                width: 100%;
+                border-radius: 0.5rem;
+                height: auto;
+                transition: all 0.1s ease-in-out;
+            }
+
+            && img:hover {
+                transform: scale(1);
+                box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+                cursor: pointer;
+            }
+
+            && span {
+                display: none;
+            }
+        }
+    }
+
+    .separator {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+    .header {
+        padding: 2rem 4rem;
+    }
+
+    .header && p {
+        font-size: 1.8rem;
+    }
+
+    .home && h1 {
+        font-size: 3rem;
+    }
+
+    .antidesign && h1,
+    .surrealism && h1,
+    .redes && h1,
+    .cine && h1,
+    .ia && h1 {
+        font-size: 3rem;
     }
 }
