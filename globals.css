@@ -98,6 +98,7 @@ body {
 
     display: flex;
     min-height: fit-content;
+    height: 100vh;
 
     && div {
         display: flex;
