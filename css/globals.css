@@ -1,0 +1,626 @@
+@font-face {
+    font-family: "Yeseva One";
+    src: url("../YesevaOne-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Indie Flower";
+    src: url("../IndieFlower-Regular.ttf") format("truetype");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    text-decoration: unset;
+    color: unset;
+    list-style: none;
+}
+
+body {
+    background-color: #001220;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: fit-content;
+    padding: 3rem 6rem;
+
+    position: sticky;
+    top: 0;
+    z-index: 99999;
+
+    width: auto;
+    height: 40px;
+
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    && img {
+        filter: invert(1);
+        width: 2rem;
+        height: 2rem;
+        margin-right: 1rem;
+    }
+
+    && p {
+        display: flex;
+        width: 100%;
+        height: fit-content;
+
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    && div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        min-width: fit-content;
+        height: fit-content;
+
+        && a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            min-width: fit-content;
+            height: fit-content;
+
+            padding: 0.5rem 1rem;
+
+            border-radius: 0.5rem;
+            border: 1px solid white;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease-in-out;
+
+            &&:hover {
+                background-color: white;
+                color: black;
+            }
+        }
+    }
+}
+
+.home {
+    background-image: url("../img/hero.jpeg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.7); /* Añade un color de fondo oscuro */
+    background-blend-mode: multiply; /* Hace que la imagen se mezcle con el color de fondo */
+
+    display: flex;
+
+    height: 100vh;
+
+    && div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        gap: 2rem;
+
+        width: 50%;
+        height: 100%;
+
+        && a {
+            display: flex;
+
+            width: 60%;
+            height: fit-content;
+
+            text-align: start;
+            font-size: 2.5rem;
+
+            padding: 1rem 4rem;
+            margin-left: -1px;
+
+            border-radius: 0 2rem 2rem 0; /* Para que el botón tenga las esquinas de la derecha redondeadas */
+            border: 1px solid black;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            text-decoration: none;
+            transition: all 0.3s ease-in-out;
+
+            &&:hover {
+                background-color: white;
+                color: black;
+            }
+        }
+    }
+    && h1 {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+
+        color: white;
+        font-size: 4rem;
+        font-weight: bold;
+
+        width: 50%;
+    }
+}
+
+.antidesign {
+    display: flex;
+    flex-direction: column;
+
+    margin-top: -135px; /* Para que no se vea el espacio del header */
+    background-color: black;
+    color: white;
+
+    width: 100%;
+    min-width: fit-content;
+
+    background-image: url("../img/antidesigncollage.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center 100px;
+
+    && div {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+
+        margin-top: 630px;
+
+        && h1 {
+            font-size: 4rem;
+        }
+
+        && p {
+            font-size: 2rem;
+        }
+
+        && div {
+            display: flex;
+            flex-direction: row;
+            width: auto;
+            margin-top: 350px;
+            padding: 0rem 20rem 15rem 20rem;
+
+            && p:first-child {
+                width: 100%;
+                text-align: start;
+            }
+
+            && p:nth-child(2) {
+                width: 100%;
+                text-align: end;
+            }
+        }
+    }
+}
+
+.surrealism {
+    display: flex;
+    flex-direction: column;
+
+    background-color: bisque;
+    && .parte1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        && img {
+            width: 200px;
+            height: auto;
+        }
+
+        && h1 {
+            font-family: "Yeseva One", fallback;
+            font-size: 8rem;
+        }
+
+        && p {
+            font-family: "Indie Flower", fallback;
+            font-size: 2rem;
+            padding-top: 2rem;
+        }
+
+        && div {
+            && p {
+                padding: 5rem 10rem 10rem 10rem;
+            }
+
+            && div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                && a {
+                    font-family: "Indie Flower", fallback;
+                    margin-left: 30rem;
+                    z-index: 300;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    width: fit-content;
+                    height: fit-content;
+
+                    text-align: center;
+                    font-size: 2.5rem;
+
+                    padding: 1rem 4rem;
+
+                    border: 1px solid black;
+                    color: black;
+                    background-color: cornsilk;
+                    text-decoration: none;
+                    transition: all 0.3s ease-in-out;
+
+                    &&:hover {
+                        background-color: white;
+                        color: black;
+                    }
+                }
+            }
+
+            && img {
+                margin-top: -210px;
+                width: 100%;
+
+                height: auto;
+            }
+        }
+    }
+
+    && .parte2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        height: 100vh;
+
+        && div {
+            padding: 5rem;
+            && h1 {
+                font-family: "Yeseva One", fallback;
+                margin-top: 5rem;
+                font-size: 3rem;
+            }
+            && p {
+                font-family: "Indie Flower", fallback;
+                margin-top: 5rem;
+                font-size: 2rem;
+                font-weight: lighter;
+                padding: 0;
+            }
+
+            && div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                && a {
+                    margin-left: 30rem;
+                    z-index: 300;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    width: fit-content;
+                    height: fit-content;
+
+                    text-align: center;
+                    font-size: 2.5rem;
+
+                    padding: 1rem 4rem;
+
+                    border: 1px solid black;
+                    color: black;
+                    background-color: cornsilk;
+                    text-decoration: none;
+                    transition: all 0.3s ease-in-out;
+
+                    &&:hover {
+                        background-color: white;
+                        color: black;
+                    }
+                }
+            }
+        }
+        && img {
+            align-self: flex-end;
+            width: 50%;
+            height: auto;
+        }
+    }
+}
+
+.redes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: fit-content;
+    padding: 20rem 0rem;
+
+    background-color: dodgerblue;
+    color: white;
+
+    && div {
+        display: flex;
+
+        && div {
+            && img {
+                position: sticky;
+                top: 200px;
+
+                border: 1px solid black;
+                border-radius: 2rem;
+                box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+                margin: 4rem;
+                aspect-ratio: 16/9 !important;
+            }
+        }
+
+        && div {
+            display: flex;
+            flex-direction: column;
+            padding-right: 4rem;
+            && h1 {
+                font-size: 4rem;
+            }
+            && p {
+                font-family: "Indie Flower", fallback;
+                margin-top: 2rem;
+                font-size: 2rem;
+            }
+        }
+    }
+
+    && .redesimages {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4rem;
+        padding: 10rem 10rem 0 10rem;
+
+        && img {
+            margin: 0;
+            width: 200px;
+            border-radius: 4rem;
+            height: auto;
+        }
+    }
+}
+
+.cine {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: fit-content;
+    padding: 20rem 0rem;
+
+    background-color: #b22222;
+    color: rgb(255, 206, 81);
+
+    && .main {
+        && p {
+            font-family: "Yeseva One", fallback;
+            text-align: center;
+            font-size: 4rem;
+        }
+        && .cineimages {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 4rem;
+            padding: 5rem 5rem 10rem 5rem;
+
+            && img {
+                margin: 0;
+                width: 300px;
+                aspect-ratio: 9/14;
+                border-radius: 0.5rem;
+                height: auto;
+                transition: all 0.1s ease-in-out;
+            }
+
+            && img:hover {
+                transform: scale(1.1);
+                box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+                cursor: pointer;
+            }
+        }
+        && h3 {
+            text-align: center;
+        }
+    }
+
+    && .peli {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5rem;
+
+        width: auto;
+        height: fit-content;
+        padding: 10rem 5rem;
+
+        && div {
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+            && h1 {
+                font-size: 4rem;
+            }
+            && p {
+                font-family: "Indie Flower", fallback;
+                margin-top: 2rem;
+                font-size: 2rem;
+            }
+        }
+        && .peliimages {
+            display: flex;
+            width: 30%;
+            height: auto;
+
+            && img {
+                width: 100%;
+                height: auto;
+                aspect-ratio: 9/14;
+                border-radius: 0.5rem;
+                transition: all 0.1s ease-in-out;
+            }
+
+            && a {
+                margin-top: -77px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                width: auto;
+
+                font-family: "Indie Flower", fallback;
+                text-align: center;
+                font-size: 2.5rem;
+
+                padding: 0.5rem 3rem;
+
+                background-color: rgba(0, 0, 0, 0.5);
+                border: 1px solid black;
+                border-radius: 0.5rem;
+                color: white;
+                text-decoration: none;
+                transition: all 0.2s ease-in-out;
+
+                &&:hover {
+                    background-color: rgba(0, 0, 0, 0.8);
+                }
+            }
+        }
+    }
+}
+
+/* <div id="ia" class="ia">
+            <div>
+                <h1 class="title">Inteligencia Artificial</h1>
+                <p>
+                    En el internet existe mucho ruido con el tema de la inteligencia artificial. Hoy en día es mas fácil
+                    contar con una inteligencia artificial, desde tu teléfono hasta en los programas que usas
+                    diariamente. En este caso te daremos algunos tips que puedes usar en tus trabajos de fotografía, con
+                    ayuda de la inteligencia artificial, mas específicamente en el programa llamado Photoshop.
+                </p>
+                <p>
+                    Normalmente para componer algún detalle mínimo o grande de una fotografía requieres de diferentes
+                    herramientas de este programa, como el "tapon de clonar" "la malla de relleno" por mencionar
+                    algunas, pero con la ultima actualización de Photoshop en algunas ocasiones podemos pasar de usar
+                    estas herramientas ya que se implemento la herramienta de "relleno generativo
+                </p>
+                <p>
+                    Esta herramienta te ayudara a generar diferentes ideas de forma rápida y creativa, desde generar tu
+                    imagen de diferentes maneras, hasta colocar objetos con los valores correctos a la imagen, debemos
+                    recordar que esta es una herramienta joven, en algunas ocasiones la imagen deberá tener manipulación
+                    de tu propia mano, ya que los resultados puedan mejorarse un poco mas.
+                </p>
+                <p>
+                    En este ejemplo podemos ver como seleccionamos cierto fragmento de la piedra lateral, y con ayuda de
+                    la inteligencia artificial podemos generar una imagen mas limpia. al realizar esta acción el
+                    programa te dará una diferente cantidad de opciones del trabajo artificial que genero y será tu
+                    criterio quien elija la mejor opción
+                </p>
+                <p>
+                    podemos observar como la inteligencia artificial realizo si trabajo de manera eficiente, y
+                    observamos como en la barra inferior nos da el numero de opciones que tenemos para seleccionar. Esta
+                    a tu decisión si deseas generar mas objetos dentro de tu imagen o dejarla como esta tu imaginación
+                    es el limite.
+                </p>
+                <p>
+                    El siguiente ejemplo se trata de rellenar nuevos espacios de la fotografía con la inteligencia
+                    artificial, usaremos de igual manera la barra inferior donde nos da la opción de "ampliación
+                    generativa" para que se genere de manera automática el relleno de la imagen.
+                </p>
+                <p>
+                    tomaremos en cuenta otro ejemplo sobre el relleno generativo de Adobe Photoshop, muchas veces los
+                    cielos de nuestras fotos pueden llegar a verse muy poco o muy recortados, o en su defecto, poco
+                    vistosos, esto se puede corregir de la misa manera que hemos estado viendo, solo necesitamos darle
+                    la instrucción a programa para que realice el trabajo.
+                </p>
+                <p>
+                    podemos observar como el programa realizo varias opciones a escoger para asi nosotros hacer nuestras
+                    correcciones a nuestro gusto
+                </p>
+                <p>
+                    no cabe duda que la inteligencia artificial esta dando pasos muy grandes, adentrándose mas a
+                    nuestras labores diarias como simplemente una imagen o hasta poder realizar ensayos.
+                </p>
+            </div>
+        </div> */
+
+.ia {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: fit-content;
+    padding: 20rem 0rem;
+
+    color: rgb(255, 206, 81);
+
+    && div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        && h1 {
+            font-size: 4rem;
+        }
+        && p {
+            font-family: "Indie Flower", fallback;
+            margin-top: 2rem;
+            font-size: 2rem;
+        }
+        && img {
+            margin: 5rem 0;
+            width: 400px;
+            border-radius: 0.5rem;
+            height: auto;
+            transition: all 0.1s ease-in-out;
+        }
+
+        && img:hover {
+            transform: scale(2);
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+        }
+    }
+
+    && .iaimages {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4rem;
+        padding: 10rem 5rem;
+
+        && img {
+            margin: 0;
+            width: 300px;
+            border-radius: 0.5rem;
+            height: auto;
+            transition: all 0.1s ease-in-out;
+        }
+
+        && img:hover {
+            transform: scale(2);
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+        }
+    }
+}
